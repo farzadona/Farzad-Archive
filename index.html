@@ -64,6 +64,7 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+        #loading-message { display: none; } /* Hide by default to prevent FOUC */
 
         /* Utility class to reveal the canvas */
         .loaded {
@@ -203,6 +204,9 @@
         let totalLineVertices = 0;
         let totalPointsVertices = 0;
         
+        // Show loading message before starting the download
+        loadingMessage.style.display = 'block';
+
         gltfLoader.load(
             'https://farzadona.com/humanoid3dmodel.glb',
             (gltf) => {
