@@ -376,3 +376,49 @@ h3, .h3 {
   @include frosted-panel;
   border-radius: 1rem;
 }
+
+/*=============================================================================
+  Homepage-specific styles (from index.html)
+=============================================================================*/
+
+/* Base styles for homepage */
+.home-body {
+    font-family: 'Inter', sans-serif;
+    /* Initial background color, will be controlled by JS */
+    background-color: rgb(255, 255, 255); 
+    color: #111827; /* text-gray-900 */
+}
+
+/* Fixed canvas (z-index 0) */
+#webgl-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: transparent;
+}
+
+/* 100vh sections for scrolling */
+.scroll-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Loading Message */
+#loading-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    font-size: 1.25rem;
+    color: #111827;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
